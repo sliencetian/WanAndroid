@@ -1,1 +1,2 @@
 /* pages/webview/webview.wxss */
+@import "../../wxParse/wxParse.wxss";

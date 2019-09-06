@@ -1,4 +1,6 @@
 // pages/webview/webview.js
+var wxParse = require('../../wxParse/wxParse.js');
+const app = getApp()
 var that
 Page({
 
@@ -6,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content:''
   },
 
   /**
@@ -18,11 +20,28 @@ Page({
     if (loadUrl.search('https') == -1){
       loadUrl = loadUrl.replace('http','https')
     }
-    this.setData({
-      url: loadUrl
+    wx.setNavigationBarTitle({
+      title: '文章详情',
+    })
+    wx.showLoading({
+      title: '加载中...',
+    })
+    that.loadHtmlContent(loadUrl)
+  },
+  loadHtmlContent:function(url){
+    wx.request({
+      url: url,
+      success:function(res){
+        wx.hideLoading()
+        that.setData({
+          content: wxParse.wxParse('article', 'html', res.data, that, 5)
+        })
+      },
+      fail:function(){
+        wx.hideLoading()
+      }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
