@@ -4,7 +4,8 @@
     "pages/project/project",
     "pages/wechatAccount/wechatAccount",
     "pages/structure/structure",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/webview/webview"
   ],
   "tabBar": {
     "color": "#7f848a",

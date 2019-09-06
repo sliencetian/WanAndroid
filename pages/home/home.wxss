@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
 .homeBanner {
   width: 100%;
-  height: 5%;
+  height: 130px;
 }
 
 .homeBannerImg {

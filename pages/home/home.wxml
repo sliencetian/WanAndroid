@@ -1,14 +1,12 @@
 <!--pages/home/home.wxml-->
 <view class="pageRoot">
-  <view class="homeBanner">
-    <swiper indicator-dots="true" indicator-color="#7f848a">
+    <swiper class="homeBanner" indicator-dots="true" indicator-color="#303030" indicator-active-color="#d81e06" autoplay="true" circular="true" interval="3000">
       <block wx:for="{{banner}}" wx:key="unique">
         <swiper-item>
-          <image src="{{item.imagePath}}" class="homeBannerImg" width="355" height="150" id="{{item.url}}"/>
+          <image src="{{item.imagePath}}" bindtap='homeBannerImgTap' class="homeBannerImg" id="{{item.url}}"/>
         </swiper-item>
       </block>
     </swiper>
-  </view>
   <block wx:for="{{pageList}}" wx:key="unique">
   <view class='liststyle'>
       <view class='listtop' id='{{item.link}}' bindtap='detail'>
