@@ -1,2 +1,27 @@
 <!--pages/structure/structure.wxml-->
-<text>pages/structure/structure.wxml</text>
+<view class="pageRoot">
+ <scroll-view scroll-x="{{true}}" class='top-nav-container' scroll-left="{{scrollLeft}}">  
+    <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
+      <view class='tab-item {{currentActiveNavIndex == index ? "active":""}}' data-current-index='{{index}}' bindtap='topNavChange'>{{item}}</view>  
+    </block>  
+  </scroll-view>
+  <view wx:if="{{currentActiveNavIndex == 0}}">
+    <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">
+      <block wx:for="{{structListData}}" wx:key='{{this}}'>  
+        <swiper-item style="overflow:scroll">
+          <text>{{item}}</text>
+        </swiper-item>  
+      </block>  
+    </swiper>
+  </view>
+  <view wx:else>
+    <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">
+      <block wx:for="{{naviListData}}" wx:key='{{this}}'>  
+        <swiper-item style="overflow:scroll">
+          <text>{{item}}</text>
+        </swiper-item>  
+      </block>  
+    </swiper>
+  </view>
+
+</view>

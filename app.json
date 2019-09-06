@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/structure/structure",
     "pages/home/home",
     "pages/project/project",
     "pages/wechatAccount/wechatAccount",
-    "pages/structure/structure",
     "pages/user/user",
     "pages/webview/webview"
   ],
