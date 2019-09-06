@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/project/project",
+    "pages/wechatAccount/wechatAccount",
+    "pages/structure/structure",
+    "pages/user/user"
+  ],
+  "tabBar": {
+    "color": "#7f848a",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#303030",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "backgroundTextStyle": "dark",
+      "iconPath": "images/table/homeNormal.png",
+      "selectedIconPath": "images/table/homeSelect.png"
+    },{
+      "pagePath": "pages/project/project",
+      "text": "项目",
+      "iconPath": "images/table/projectNormal.png",
+      "selectedIconPath": "images/table/projectSelect.png"
+    },{
+      "pagePath": "pages/wechatAccount/wechatAccount",
+      "text": "公众号",
+      "iconPath": "images/table/wechatAccountNormal.png",
+      "selectedIconPath": "images/table/wechatAccountSelect.png"
+    },{
+      "pagePath": "pages/structure/structure",
+      "text": "体系",
+      "iconPath": "images/table/structureNormal.png",
+      "selectedIconPath": "images/table/structureSelect.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "images/table/userNormal.png",
+      "selectedIconPath": "images/table/userSelect.png"
+    }]
+  },
+  "window": {
+    "color": "#303030",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#303030",
+    "navigationBarTitleText": "WanAndroid",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

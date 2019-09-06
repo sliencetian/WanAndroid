@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="pageRoot">
+  <view class="homeBanner">
+    <swiper indicator-dots="true" indicator-color="#7f848a">
+      <block wx:for="{{banner}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.imagePath}}" class="homeBannerImg" width="355" height="150" id="{{item.url}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <block wx:for="{{pageList}}" wx:key="unique">
+  <view class='liststyle'>
+      <view class='listtop' id='{{item.link}}' bindtap='detail'>
+        <view>
+          <image class='listtopimage' src='../../images/home/head.jpg'></image>
+        </view>
+        <view class="listUserName">{{item.author}}</view>
+        <view class='listtoptime'>{{item.niceDate}}</view>
+      </view>
+      <view class='title' id='{{item.link}}' bindtap='detail'>{{item.title}}</view>
+      <text wx:if="{{item.desc}}" class='desc' bindtap='detail'>{{item.desc}}</text>
+      <view class='listtop'>
+        <view class='chapterName' id='{{item.chapterId}}' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
+        <image wx:if="{{item.collect}}" class='collect' src='../../images/home/collectionSelect.png' id='{{index}}' bindtap='collect'></image>
+        <image wx:if="{{!item.collect}}" class='collect' src='../../images/home/collectionNormal.png' id='{{index}}' bindtap='collect'></image>
+      </view>
+    </view>
+  </block>
+</view>
