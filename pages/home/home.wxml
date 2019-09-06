@@ -8,7 +8,7 @@
       </block>
     </swiper>
   <block wx:for="{{pageList}}" wx:key="unique">
-  <view class='liststyle'>
+    <view class='liststyle'>
       <view class='listtop' id='{{item.link}}' bindtap='detail'>
         <view>
           <image class='listtopimage' src='../../images/home/head.jpg'></image>

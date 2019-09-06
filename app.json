@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/project/project",
+    "pages/home/home",
     "pages/wechatAccount/wechatAccount",
     "pages/structure/structure",
     "pages/user/user",
@@ -42,7 +42,7 @@
   "window": {
     "color": "#303030",
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#303030",
+    "navigationBarBackgroundColor": "#212121",
     "navigationBarTitleText": "WanAndroid",
     "navigationBarTextStyle": "white"
   },
