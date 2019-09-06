@@ -117,12 +117,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-  detail:function(event){
-    var url = event.currentTarget.id
-    wx.navigateTo({
-      url: '../../pages/webview/webview?url=' + encodeURIComponent(url),
-    })
-  },
   homeBannerImgTap:function(event){
     var url = event.currentTarget.id
     wx.navigateTo({

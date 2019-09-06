@@ -8,24 +8,7 @@
   <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">  
     <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
       <swiper-item style="overflow:scroll">
-        <block wx:for="{{tabListDatas[item.id]}}" wx:key='{{this}}'>
-          <view class='liststyle'>
-            <view class='listtop' id='{{item.link}}' bindtap='detail'>
-              <view>
-                <image class='listtopimage' src='../../images/home/head.jpg'></image>
-              </view>
-              <view class="listUserName">{{item.author}}</view>
-              <view class='listtoptime'>{{item.niceDate}}</view>
-            </view>
-            <view class='title' id='{{item.link}}' bindtap='detail'>{{item.title}}</view>
-            <text wx:if="{{item.desc}}" class='desc' bindtap='detail'>{{item.desc}}</text>
-            <view class='listtop'>
-              <view class='chapterName' id='{{item.chapterId}}' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
-              <image wx:if="{{item.collect}}" class='collect' src='../../images/home/collectionSelect.png' id='{{index}}' bindtap='collect'></image>
-              <image wx:if="{{!item.collect}}" class='collect' src='../../images/home/collectionNormal.png' id='{{index}}' bindtap='collect'></image>
-            </view>
-          </view> 
-        </block>
+        <articleListView listData="{{tabListDatas[item.id]}}"/>
       </swiper-item>  
     </block>  
   </swiper>  
