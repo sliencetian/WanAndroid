@@ -1,2 +1,15 @@
 <!--pages/wechatAccount/wechatAccount.wxml-->
-<text>pages/wechatAccount/wechatAccount.wxml</text>
+<view class="pageRoot">  
+  <scroll-view scroll-x="{{true}}" class='top-nav-container' scroll-left="{{scrollLeft}}">  
+    <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
+      <view class='tab-item {{currentActiveNavIndex == index ? "active":""}}' data-current-index='{{index}}' bindtap='topNavChange'>{{item.name}}</view>  
+    </block>  
+  </scroll-view>  
+  <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">  
+    <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
+      <swiper-item style="overflow:scroll">
+        <articleListView listData="{{tabListDatas[item.id]}}"/>
+      </swiper-item>  
+    </block>  
+  </swiper>  
+</view>  

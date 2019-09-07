@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "articleListView": "../../components/articleListPage/articleListPage"
+  },
+  "enablePullDownRefresh": true
 }

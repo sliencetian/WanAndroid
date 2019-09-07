@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/user/user",
-    "pages/myCollect/myCollect",
-    "pages/login/login",
-    "pages/regist/regist",
     "pages/home/home",
     "pages/project/project",
     "pages/wechatAccount/wechatAccount",
     "pages/structure/structure",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/regist/regist",
+    "pages/myCollect/myCollect",
     "pages/webview/webview",
     "pages/articleList/articleList"
   ],

@@ -1,1 +1,27 @@
 /* pages/wechatAccount/wechatAccount.wxss */
+.top-nav-container{  
+  width: 100%;  
+  height: 80rpx;  
+  line-height: 80rpx;  
+  font-size: 14px;  
+  background-color: #212121;  
+  vertical-align: middle;  
+  white-space: nowrap;  
+}  
+  
+.top-nav-container .tab-item{  
+  display: inline-block;  
+  margin: 0rpx 30rpx;  
+  color: #BCBCBC
+}  
+  
+.top-nav-container .tab-item.active{  
+  color: white;  
+  border-bottom: 4rpx solid #d81e06;  
+  line-height: 52rpx;  
+}  
+  
+.swiper-container{  
+  height: calc(100vh - 60rpx);  
+  background-color: #303030;
+}  
