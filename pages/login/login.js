@@ -52,6 +52,7 @@ Page({
           if (result.errorCode == 0){
             app.globalData.userInfo = result.data
             wx.setStorageSync("userInfo", result.data)
+            wx.setStorageSync("cookies", res.cookies)
             wx.navigateBack({
               delta: 1
             })

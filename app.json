@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/user/user",
+    "pages/myCollect/myCollect",
     "pages/login/login",
     "pages/regist/regist",
     "pages/home/home",

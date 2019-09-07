@@ -1,0 +1,4 @@
+<!--pages/articleList/articleList.wxml-->
+<view class="pageRoot">
+  <articleListView listData="{{pageList}}"/>
+</view>

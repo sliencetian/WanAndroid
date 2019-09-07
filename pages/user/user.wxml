@@ -5,12 +5,12 @@
     <text class="head-name" bindtap='login'>{{userInfo == null ? "点我登录" : userInfo.nickname}}</text>
   </view>
   <view class="bottom-container">
-    <view class="bottom-items">
+    <view class="bottom-items" bindtap="clickCollect">
       <image class='bottom-items-left-img' src='../../images/user/collect.png'></image>
       <view class='bottom-items-title'>收藏</view>
       <image class='bottom-items-right-img' src='../../images/user/right.png'></image>
     </view>
-    <view class="bottom-items">
+    <view class="bottom-items" bindtap="clickAbout">
       <image class='bottom-items-left-img' src='../../images/user/about.png'></image>
       <view class='bottom-items-title'>关于</view>
       <image class='bottom-items-right-img' src='../../images/user/right.png'></image>

@@ -42,6 +42,16 @@ Page({
       })
     }
   },
+  clickCollect:function(){
+    wx.navigateTo({
+      url: '../myCollect/myCollect',
+    })
+  },
+  clickAbout: function () {
+    wx.navigateTo({
+      url: '../about/about',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
