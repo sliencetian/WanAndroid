@@ -47,7 +47,8 @@ Page({
         },
         success:function(res){
           wx.hideLoading()
-          if (result.errorCode == 0) {
+          console.log(res)
+          if (res.data.errorCode == 0) {
             app.setUserInfo(res)
             wx.setStorageSync("username", that.data.username)
             wx.setStorageSync("password", that.data.password)
@@ -56,7 +57,7 @@ Page({
             })
           } else {
             wx.showToast({
-              title: result.errorMsg,
+              title: res.data.errorMsg,
               icon:'none'
             })
           }
