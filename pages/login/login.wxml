@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view class="login-top-container">
+  <image class='loginbg' mode='widthFix' src='../../images/login/logo.png'/>
+</view>
+<view class="login-content">
+    <view class="login-input-container">
+      <image class="login-left-img" src="../../images/login/username.png"></image>
+      <input class="login-input" placeholder="用户名" bindinput='loginusername' ></input>
+      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+    </view>
+    <view class="login-input-container">
+      <image class="login-left-img" src="../../images/login/password.png"></image>
+      <input class="login-input" placeholder="密码" bindinput='loginpassword'></input>
+      <image class="login-show-password-img" src="../../images/login/show_password.png"></image>
+      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+    </view>
+    <view class='login-button' bindtap='clickLogin'>登陆</view>
+    <view class="login-register-container">
+      <text class='login-regist' bindtap='clickRegister'>还没账号?</text>
+      <text class='login-regist-a' bindtap="clickRegister">注册</text>
+    </view>
+</view>

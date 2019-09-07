@@ -1,18 +1,46 @@
 // pages/user/user.js
+var app = getApp()
+var that
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    that = this
+    if(app.globalData.userInfo != null){
+      that.setData({
+        userInfo: app.globalData.userInfo
+      })
+    }
+  },
 
+  login:function(){
+    if (that.data.userInfo == null){
+      wx.navigateTo({
+        url: '../login/login'
+      })
+    } else {
+      wx.showModal({
+        content: '退出登录?',
+        success:function(res){
+          if(res.confirm){
+            that.setData({
+              userInfo:null
+            })
+            app.globalData.userInfo = null
+            wx.setStorageSync("userInfo", null)
+          }
+        }
+      })
+    }
   },
 
   /**
@@ -26,7 +54,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (app.globalData.userInfo != null){
+      that.setData({
+        userInfo: app.globalData.userInfo
+      })
+    }
   },
 
   /**

@@ -1,0 +1,77 @@
+/* pages/regist/regist.wxss */
+page {
+  background-color: #212121;
+}
+.login-top-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginbg {
+  width: 40%;
+  margin-top: 10%
+}
+.login-content{
+  height: 50%;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  background-color: #303030;
+  margin-right: 20px;
+}
+.login-input-container{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #595959;
+}
+.login-input{
+  font-size: 12px;
+  color: white;
+  margin-left: 10px;
+  text-align: left;
+}
+.login-left-img{
+  width: 20px;
+  height: 20px;
+}
+.login-clear-img{
+  width: 10px;
+  height: 10px;
+  align-items: right;
+}
+.login-show-password-img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.login-button{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: #2A2A2A;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+}
+.login-register-container{
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+}
+.login-regist{
+  font-size: 13px;
+  color: white
+}
+.login-regist-a{
+  font-size: 13px;
+  color: #D32F2E
+}

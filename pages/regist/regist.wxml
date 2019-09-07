@@ -1,0 +1,24 @@
+<!--pages/regist/regist.wxml-->
+<view class="login-top-container">
+  <image class='loginbg' mode='widthFix' src='../../images/login/logo.png'/>
+</view>
+<view class="login-content">
+    <view class="login-input-container">
+      <image class="login-left-img" src="../../images/login/username.png"></image>
+      <input class="login-input" placeholder="用户名" bindinput='loginusername'></input>
+      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+    </view>
+    <view class="login-input-container">
+      <image class="login-left-img" src="../../images/login/password.png"></image>
+      <input class="login-input" placeholder="密码" bindinput='loginpassword'></input>
+      <image class="login-show-password-img" src="../../images/login/show_password.png"></image>
+      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+    </view>
+    <view class="login-input-container">
+      <image class="login-left-img" src="../../images/login/password.png"></image>
+      <input class="login-input" placeholder="确认密码" bindinput='repassword'></input>
+      <image class="login-show-password-img" src="../../images/login/show_password.png"></image>
+      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+    </view>
+    <view class='login-button' bindtap='clickLogin'>注册</view>
+</view>

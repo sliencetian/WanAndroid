@@ -40,7 +40,6 @@ Page({
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
         var resultlist = res.data.data.datas
-        console.log(resultlist)
         var tempList
         if(res.data.currPage == 1){
           tempList = resultlist
