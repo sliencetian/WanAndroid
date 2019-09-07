@@ -3,7 +3,7 @@
     <swiper class="homeBanner" indicator-dots="true" indicator-color="#303030" indicator-active-color="#d81e06" autoplay="true" circular="true" interval="3000">
       <block wx:for="{{banner}}" wx:key="unique">
         <swiper-item>
-          <image src="{{item.imagePath}}" bindtap='homeBannerImgTap' class="homeBannerImg" id="{{item.url}}"/>
+          <image src="{{item.imagePath}}" data-data="{{item}}" bindtap='homeBannerImgTap' class="homeBannerImg" />
         </swiper-item>
       </block>
     </swiper>

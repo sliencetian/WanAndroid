@@ -26,3 +26,34 @@
   height: calc(100vh - 60rpx);  
   background-color: #303030;
 }  
+
+.floatContainer{
+  margin: 10px;
+}
+.floatTitle{
+  color: white;
+  font-size: 13px
+}
+.floatContent{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.floatText{
+  color: #C8C8C8; 
+  margin-left: 0px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #454545;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

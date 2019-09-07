@@ -20,8 +20,11 @@ Page({
     if (loadUrl.search('https') == -1){
       loadUrl = loadUrl.replace('http','https')
     }
+    console.log('webview')
+    console.log(options)
+    console.log(options.title)
     wx.setNavigationBarTitle({
-      title: '文章详情',
+      title: options.title,
     })
     wx.showLoading({
       title: '加载中...',

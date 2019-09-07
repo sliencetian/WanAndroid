@@ -72,6 +72,20 @@ Page({
     }
   },
 
+  jumpArticleList:function(item){
+    var data = item.currentTarget.dataset.data
+    wx.navigateTo({
+      url: '../../pages/articleList/articleList?cid=' + data.id + '&title=' + data.name,
+    })
+  },
+
+  jumpArticleDetail: function (item) {
+    var data = item.currentTarget.dataset.data
+    wx.navigateTo({
+      url: '../../pages/webview/webview?url=' + encodeURIComponent(data.link) + '&title=' + data.title,
+    })
+  },
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

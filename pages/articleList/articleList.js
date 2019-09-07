@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/articleList/articleList.js
 const app = getApp()
 var that = this
 Page({
@@ -7,42 +7,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    banner:[],
-    pageList:[],
-    pageNumber:0,
+    pageList: [],
+    pageNumber: 0,
+    cid:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.stopPullDownRefresh()
     that = this
-    that.loadBannerData()
+    wx.stopPullDownRefresh()
+    that.setData({
+      cid: options.cid
+    })
+    wx.setNavigationBarTitle({
+      title: options.title,
+    })
     that.loadPageList()
   },
-
-  loadBannerData:function(){
-    wx.request({
-      url: app.globalData.baseUrl +'banner/json',
-      success:function(res){
-        that.setData({
-          banner: res.data.data
-        })
-      }
-    })
-  },
-  loadPageList:function(){
+  loadPageList: function () {
     wx.showNavigationBarLoading()
     wx.request({
-      url: app.globalData.baseUrl + 'article/list/'+that.data.pageNumber+'/json',
+      url: app.globalData.baseUrl + 'article/list/' + that.data.pageNumber + '/json?cid=' + that.data.cid,
       success: function (res) {
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
         var resultlist = res.data.data.datas
         console.log(resultlist)
         var tempList
-        if(res.data.currPage == 1){
+        if (res.data.currPage == 1) {
           tempList = resultlist
         } else {
           tempList = that.data.pageList.concat(resultlist)
@@ -50,13 +44,13 @@ Page({
         that.setData({
           pageList: tempList
         })
-        
+
       },
-      fail:function(){
+      fail: function () {
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
       }
-      
+
     })
   },
 
@@ -117,11 +111,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-  homeBannerImgTap:function(event){
-    var data = event.currentTarget.dataset.data
-    console.log(data)
+  homeBannerImgTap: function (event) {
+    var url = event.currentTarget.id
     wx.navigateTo({
-      url: '../../pages/webview/webview?url=' + encodeURIComponent(data.url) + '&title=' + data.title,
+      url: '../../pages/webview/webview?url=' + encodeURIComponent(url),
     })
   }
 })
