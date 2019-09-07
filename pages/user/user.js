@@ -1,4 +1,5 @@
 // pages/user/user.js
+var router = require('../../utils/page-router.js')
 var app = getApp()
 var that
 Page({
@@ -43,14 +44,10 @@ Page({
     }
   },
   clickCollect:function(){
-    wx.navigateTo({
-      url: '../myCollect/myCollect',
-    })
+    router.collect()
   },
   clickAbout: function () {
-    wx.navigateTo({
-      url: '../about/about',
-    })
+    router.about()
   },
 
   /**

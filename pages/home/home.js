@@ -1,4 +1,5 @@
 // pages/home/home.js
+var router = require('../../utils/page-router.js')
 const app = getApp()
 var that = this
 Page({
@@ -19,7 +20,6 @@ Page({
     wx.stopPullDownRefresh()
     that = this
     that.loadBannerData()
-    that.loadPageList()
   },
 
   loadBannerData:function(){
@@ -29,6 +29,7 @@ Page({
         that.setData({
           banner: res.data.data
         })
+        that.loadPageList()
       }
     })
   },
@@ -41,10 +42,16 @@ Page({
         wx.stopPullDownRefresh()
         var resultlist = res.data.data.datas
         var tempList
-        if(res.data.currPage == 1){
+        if(res.data.data.curPage == 1){
           tempList = resultlist
         } else {
           tempList = that.data.pageList.concat(resultlist)
+        }
+        var collectids = app.globalData.collectids
+        for (var i in tempList){
+          if (collectids.indexOf(tempList[i].id) != -1) {
+            tempList[i].collect = true
+          }
         }
         that.setData({
           pageList: tempList
@@ -118,9 +125,6 @@ Page({
   },
   homeBannerImgTap:function(event){
     var data = event.currentTarget.dataset.data
-    console.log(data)
-    wx.navigateTo({
-      url: '../../pages/webview/webview?url=' + encodeURIComponent(data.url) + '&title=' + data.title,
-    })
+    router.webView(data.url, data.title)
   }
 })

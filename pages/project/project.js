@@ -59,6 +59,12 @@ Page({
         } else {
           resultListData[currTab.id] = resultListData[currTab.id].concat(res.data.data.datas)
         }
+        var collectids = app.globalData.collectids
+        for (var i in resultListData[currTab.id]) {
+          if (collectids.indexOf(resultListData[currTab.id][i].id) != -1) {
+            resultListData[currTab.id][i].collect = true
+          }
+        }
         that.setData({
           tabListDatas: resultListData
         })

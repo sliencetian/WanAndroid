@@ -1,4 +1,5 @@
 // pages/structure/structure.js
+var router = require('../../utils/page-router.js')
 var app = getApp()
 var that
 Page({
@@ -74,16 +75,12 @@ Page({
 
   jumpArticleList:function(item){
     var data = item.currentTarget.dataset.data
-    wx.navigateTo({
-      url: '../../pages/articleList/articleList?cid=' + data.id + '&title=' + data.name,
-    })
+    router.articleList(data.id, data.name)
   },
 
   jumpArticleDetail: function (item) {
     var data = item.currentTarget.dataset.data
-    wx.navigateTo({
-      url: '../../pages/webview/webview?url=' + encodeURIComponent(data.link) + '&title=' + data.title,
-    })
+    router.webView(data.link, data.title)
   },
 
   /**

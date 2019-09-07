@@ -35,7 +35,6 @@ Page({
       wx.showLoading({
         title: '加载中...',
       })
-      //420315258
       wx.request({
         url: app.globalData.baseUrl + 'user/login',
         method:'POST',
@@ -48,11 +47,10 @@ Page({
         },
         success:function(res){
           wx.hideLoading()
-          var result = res.data
-          if (result.errorCode == 0){
-            app.globalData.userInfo = result.data
-            wx.setStorageSync("userInfo", result.data)
-            wx.setStorageSync("cookies", res.cookies)
+          if (result.errorCode == 0) {
+            app.setUserInfo(res)
+            wx.setStorageSync("username", that.data.username)
+            wx.setStorageSync("password", that.data.password)
             wx.navigateBack({
               delta: 1
             })

@@ -12,8 +12,8 @@
       <text wx:if="{{item.desc}}" class='desc' bindtap='detail'>{{item.desc}}</text>
       <view class='listtop'>
         <view class='chapterName' id='{{item.chapterId}}' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
-        <image wx:if="{{item.collect}}" class='collect' src='../../images/home/collectionSelect.png' id='{{item.id}}' bindtap='collect'></image>
-        <image wx:if="{{!item.collect}}" class='collect' src='../../images/home/collectionNormal.png' id='{{item.id}}' bindtap='collect'></image>
+        <image wx:if="{{item.collect}}" class='collect' data-index="{{index}}" src='../../images/home/collectionSelect.png' id='{{item.id}}' bindtap='collect'></image>
+        <image wx:if="{{!item.collect}}" class='collect' data-index="{{index}}" src='../../images/home/collectionNormal.png' id='{{item.id}}' bindtap='collect'></image>
       </view>
     </view>
   </block>

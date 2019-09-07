@@ -60,10 +60,10 @@ Page({
         },
         success: function (res) {
           wx.hideLoading()
-          var result = res.data
           if (result.errorCode == 0) {
-            app.globalData.userInfo = result.data
-            wx.setStorageSync("userInfo", result.data)
+            app.setUserInfo(res)
+            wx.setStorageSync("username", that.data.username)
+            wx.setStorageSync("password", that.data.password)
             wx.navigateBack({
               delta: 2
             })

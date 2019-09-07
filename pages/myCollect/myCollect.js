@@ -27,19 +27,24 @@ Page({
     wx.request({
       url: app.globalData.baseUrl + 'lg/collect/list/' + that.data.pageNumber + '/json',
       header:{
-        'cookie': wx.getStorageSync("cookies").toString(),
+        'cookie': app.globalData.cookie,
       },
       success: function (res) {
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
-        console.log(res)
         if (res.data.errorCode == 0){
           var resultlist = res.data.data.datas
           var tempList
-          if (res.data.currPage == 1) {
+          if (res.data.data.curPage == 1) {
             tempList = resultlist
           } else {
             tempList = that.data.pageList.concat(resultlist)
+          }
+          var collectids = app.globalData.collectids
+          for (var i in tempList) {
+            if (collectids.indexOf(tempList[i].originId) != -1) {
+              tempList[i].collect = true
+            }
           }
           that.setData({
             pageList: tempList

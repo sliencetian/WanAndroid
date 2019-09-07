@@ -9,6 +9,7 @@
     "pages/regist/regist",
     "pages/myCollect/myCollect",
     "pages/webview/webview",
+    "pages/about/about",
     "pages/articleList/articleList"
   ],
   "tabBar": {
