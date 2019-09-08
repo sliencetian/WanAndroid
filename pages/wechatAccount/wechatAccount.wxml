@@ -1,8 +1,8 @@
 <!--pages/wechatAccount/wechatAccount.wxml-->
 <view class="pageRoot">  
-  <scroll-view scroll-x="{{true}}" class='top-nav-container' scroll-left="{{scrollLeft}}">  
+  <scroll-view scroll-x="{{true}}" class='top-nav-container' scroll-into-view="{{activeTab}}">  
     <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
-      <view class='tab-item {{currentActiveNavIndex == index ? "active":""}}' data-current-index='{{index}}' bindtap='topNavChange'>{{item.name}}</view>  
+      <view class='tab-item {{currentActiveNavIndex == index ? "active":""}}' data-current-index='{{index}}' bindtap='topNavChange' id='tab-item-{{index}}'>{{item.name}}</view>  
     </block>  
   </scroll-view>  
   <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">  
