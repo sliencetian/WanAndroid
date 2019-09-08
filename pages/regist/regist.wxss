@@ -30,12 +30,14 @@ page {
   padding-left: 10px;
   padding-right: 10px;
   border-bottom: 1px solid #595959;
+  justify-content: space-between;
 }
 .login-input{
   font-size: 12px;
   color: white;
   margin-left: 10px;
   text-align: left;
+  width: 100%;
 }
 .login-left-img{
   width: 20px;
@@ -45,6 +47,7 @@ page {
   width: 10px;
   height: 10px;
   align-items: right;
+  float: right;
 }
 .login-show-password-img{
   width: 15px;
