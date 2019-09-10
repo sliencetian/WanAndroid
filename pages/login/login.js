@@ -8,7 +8,8 @@ Page({
    */
   data: {
     username:'',
-    password:''
+    password:'',
+    isShowPassword:false
   },
   loginusername:function(e){
     that.setData({
@@ -86,7 +87,24 @@ Page({
       title: '登录',
     })
   },
-
+  clearInput:function(e){
+    var inputId = e.currentTarget.dataset.type
+    console.log(inputId)
+    if (inputId == 'username') {
+      this.setData({
+        username:""
+      })
+    } else {
+      this.setData({
+        password: ""
+      })
+    }
+  },
+  showHidePassword: function () {
+    this.setData({
+      isShowPassword:!this.data.isShowPassword
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

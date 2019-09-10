@@ -9,7 +9,9 @@ Page({
   data: {
     username: '',
     password: '',
-    repassword:''
+    repassword: '',
+    isShowPassword: false,
+    isShowRePassword:false
   },
   loginusername: function (e) {
     that.setData({
@@ -95,6 +97,35 @@ Page({
     wx.setNavigationBarTitle({
       title: '注册',
     })
+  },
+  clearInput: function (e) {
+    var type = e.currentTarget.dataset.type
+    if (type == 'username') {
+      this.setData({
+        username: ""
+      })
+    } else if (type == 'password'){
+      this.setData({
+        password: ""
+      })
+    } else {
+      this.setData({
+        repassword: ""
+      })
+    }
+  },
+  showHidePassword: function (e) {
+    var type = e.currentTarget.dataset.type
+    console.log(type)
+    if (type == 'password') {
+      this.setData({
+        isShowPassword: !this.data.isShowPassword
+      })
+    } else {
+      this.setData({
+        isShowRePassword: !this.data.isShowRePassword
+      })
+    }
   },
 
   /**

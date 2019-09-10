@@ -4,15 +4,15 @@
 </view>
 <view class="login-content">
     <view class="login-input-container">
-      <image class="login-left-img" src="../../images/login/username.png"></image>
-      <input class="login-input" placeholder="用户名" bindinput='loginusername' ></input>
-      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+      <image class="login-left-img" src="../../images/login/username.png" mode="aspectFit"></image>
+      <input class="login-input" value="{{username}}" placeholder="用户名" bindinput='loginusername'></input>
+      <image class="login-clear-img" src="../../images/login/clear.png" bindtap='clearInput' data-type="username" mode="aspectFit"></image>
     </view>
     <view class="login-input-container">
-      <image class="login-left-img" src="../../images/login/password.png"></image>
-      <input class="login-input" placeholder="密码" bindinput='loginpassword'></input>
-      <image class="login-show-password-img" src="../../images/login/show_password.png"></image>
-      <image class="login-clear-img" src="../../images/login/clear.png"></image>
+      <image class="login-left-img" src="../../images/login/password.png" mode="aspectFit"></image>
+      <input class="login-input" value="{{password}}" type='{{isShowPassword ? "text" : "password"}}' placeholder="密码" bindinput='loginpassword'></input>
+      <image class="login-show-password-img" src='../../images/login/{{isShowPassword ? "show_password" : "hide_password"}}.png' bindtap='showHidePassword' mode="aspectFit"></image>
+      <image class="login-clear-img" src="../../images/login/clear.png" bindtap='clearInput' data-type="password" mode="aspectFit"></image>
     </view>
     <view class='login-button' bindtap='clickLogin'>登陆</view>
     <view class="login-register-container">
