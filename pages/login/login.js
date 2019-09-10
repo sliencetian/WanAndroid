@@ -89,7 +89,6 @@ Page({
   },
   clearInput:function(e){
     var inputId = e.currentTarget.dataset.type
-    console.log(inputId)
     if (inputId == 'username') {
       this.setData({
         username:""

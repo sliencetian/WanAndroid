@@ -116,7 +116,6 @@ Page({
   },
   showHidePassword: function (e) {
     var type = e.currentTarget.dataset.type
-    console.log(type)
     if (type == 'password') {
       this.setData({
         isShowPassword: !this.data.isShowPassword
