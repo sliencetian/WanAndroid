@@ -1,1 +1,57 @@
 /* pages/about/about.wxss */
+
+.rootPage {
+  height: 100%;
+  text-align: center;
+}
+
+.about-logo {
+  width: 100px;
+  height: 80px;
+  margin-top: 10%;
+}
+
+.about-name {
+  color: #dee0e2;
+  font-size: 18px;
+}
+
+.about-version {
+  color: #c1c3c5;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.about-source{
+  width: 100px;
+  height: 100px;
+}
+
+.about-container{
+  display: flex;
+  justify-content: center;
+}
+
+.about-item {
+  height: 30px;
+  color: #dee0e2;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.about-item-desc {
+  height: 40px;
+  color: #dee0e2;
+  font-size: 10px;
+}
+
+.about-copyright {
+  width: 100%;
+  font-size: 14px;
+  color: #767676;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  white-space: pre-line;
+}

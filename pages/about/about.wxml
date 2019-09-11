@@ -1,2 +1,19 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="rootPage">
+  <image class="about-logo" src="../../images/login/logo.png" mode="aspectFit"></image>
+  <!-- <view class="about-name">玩 Android</view> -->
+  <view class="about-version">Version 1.0.0</view>
+  <view class="about-container">
+    <view class="about-container-item">
+      <view class="about-item" >公众号</view>
+      <image class="about-source"  src="../../images/gongzhonghao.jpg" mode="aspectFit"></image>
+      <view class="about-item-desc" >点击保存二维码</view>
+    </view>
+    <view class="about-container-item" style="margin-left: 20px">
+      <view class="about-item" >源码</view>
+      <image class="about-source" src="../../images/source_code.png" mode="aspectFit"></image>
+      <view class="about-item-desc">点击保存二维码</view>
+    </view>
+  </view>
+  <view class="about-copyright">Copyright © 2017 · wanandroid.com \n All Rights Reserved.</view>
+</view>
