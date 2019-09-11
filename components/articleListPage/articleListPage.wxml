@@ -3,7 +3,7 @@
     <view class='liststyleC'>
       <view class='listtop' id='{{item.link}}' bindtap='detail'>
         <view>
-          <image class='listtopimage' src='../../images/home/head.jpg'></image>
+          <image class='listtopimage' src="{{item.authorUrl}}"></image>
         </view>
         <view class="listUserName">{{item.author}}</view>
         <view class='listtoptime'>{{item.niceDate}}</view>

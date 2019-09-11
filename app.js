@@ -1,4 +1,5 @@
 //app.js
+var util = require('/utils/util.js')
 App({
   globalData: {
     mainColor:"",
@@ -45,5 +46,6 @@ App({
     this.globalData.userInfo = loginResut.data.data
     this.globalData.cookie = loginResut.cookies.toString()
     this.globalData.collectids = loginResut.data.data.collectIds
+    this.globalData.userInfo.authorUrl = util.generateUserIconByAuthor(this.globalData.userInfo.nickname)
   }
 })

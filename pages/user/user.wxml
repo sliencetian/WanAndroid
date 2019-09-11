@@ -1,7 +1,7 @@
 <!--pages/user/user.wxml-->
 <view class="pageRoot">
   <view class="head-container">
-    <image class='headimage' src='../../images/user/head.jpg' bindtap='login'></image>
+    <image class='headimage' src="{{userInfo.authorUrl}}" bindtap='login'></image>
     <text class="head-name" bindtap='login'>{{userInfo == null ? "点我登录" : userInfo.nickname}}</text>
   </view>
   <view class="bottom-container">

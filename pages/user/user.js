@@ -1,5 +1,6 @@
 // pages/user/user.js
 var router = require('../../utils/page-router.js')
+var util = require('../../utils/util.js')
 var app = getApp()
 var that
 Page({

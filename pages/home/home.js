@@ -1,5 +1,6 @@
 // pages/home/home.js
 var router = require('../../utils/page-router.js')
+var util = require('../../utils/util.js')
 const app = getApp()
 var that = this
 Page({
@@ -49,6 +50,7 @@ Page({
         }
         var collectids = app.globalData.collectids
         for (var i in tempList){
+          tempList[i].authorUrl = util.generateUserIconByAuthor(tempList[i].author)
           if (collectids.indexOf(tempList[i].id) != -1) {
             tempList[i].collect = true
           }

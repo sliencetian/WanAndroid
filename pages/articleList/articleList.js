@@ -1,4 +1,5 @@
 // pages/articleList/articleList.js
+var util = require('../../utils/util.js')
 const app = getApp()
 var that = this
 Page({

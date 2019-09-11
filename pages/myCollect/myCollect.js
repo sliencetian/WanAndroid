@@ -1,5 +1,6 @@
 // pages/articleList/articleList.js
 const app = getApp()
+var util = require('../../utils/util.js')
 var that = this
 Page({
 
@@ -42,6 +43,7 @@ Page({
           }
           var collectids = app.globalData.collectids
           for (var i in tempList) {
+            tempList[i].authorUrl = util.generateUserIconByAuthor(tempList[i].author)
             if (collectids.indexOf(tempList[i].originId) != -1) {
               tempList[i].collect = true
             }

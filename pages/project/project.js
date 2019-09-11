@@ -1,4 +1,5 @@
 var app = getApp()
+var util = require('../../utils/util.js')
 var that
 Page({
   data: {
@@ -54,6 +55,7 @@ Page({
         }
         var collectids = app.globalData.collectids
         for (var i in resultListData[currTab.id]) {
+          resultListData[currTab.id][i].authorUrl = util.generateUserIconByAuthor(resultListData[currTab.id][i].author)
           if (collectids.indexOf(resultListData[currTab.id][i].id) != -1) {
             resultListData[currTab.id][i].collect = true
           }
