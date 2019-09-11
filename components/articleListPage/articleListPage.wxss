@@ -1,5 +1,7 @@
 /* articleListPage/articleListPage.wxss */
-
+.article-list-scroll-view{
+  display: flex;
+}
 .liststyleC{
   display: flex;
   flex-direction: column;

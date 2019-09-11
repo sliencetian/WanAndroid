@@ -1,4 +1,5 @@
 // articleListPage/articleListPage.js
+var router = require('../../utils/page-router.js')
 var app = getApp()
 var that
 Component({
@@ -21,11 +22,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    detail: function (item) {
-      var url = item.currentTarget.id
-      wx.navigateTo({
-        url: '../../pages/webview/webview?url=' + encodeURIComponent(url),
-      })
+    detail: function (e) {
+      var item = e.currentTarget.dataset.item
+      router.webView(item.link, item.title)
     },
     collect:function(e){
       that = this
