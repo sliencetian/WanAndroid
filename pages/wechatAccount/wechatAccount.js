@@ -59,7 +59,6 @@ Page({
           if (collectids.indexOf(resultListData[currTab.id][i].id) != -1) {
             resultListData[currTab.id][i].collect = true
           }
-          console.log(resultListData[currTab.id][i])
         }
         that.setData({
           tabListDatas: resultListData

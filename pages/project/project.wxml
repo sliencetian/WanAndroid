@@ -5,7 +5,7 @@
       <view class='tab-item {{currentActiveNavIndex == index ? "active":""}}' data-current-index='{{index}}' bindtap='topNavChange' id='tab-item-{{index}}'>{{item.name}}</view>  
     </block>  
   </scroll-view>  
-  <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}' bindtouchmove="touchmove">  
+  <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}'>  
     <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
       <swiper-item style="overflow:scroll">
         <articleListView listData="{{tabListDatas[item.id]}}"/>

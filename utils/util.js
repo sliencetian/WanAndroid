@@ -12,13 +12,11 @@ const HEADER_URLS = [
 ]
 
 export function generateUserIconByAuthor(author) {
-  console.log('author:' + author)
   var authorUrl = HEADER_URLS[0]
   if (author != '') {
     var index = (author.charCodeAt(0) + author.charCodeAt(author.length -1)) % 10
     authorUrl = HEADER_URLS[index]
   }
-  console.log('authorUrl:' + authorUrl)
   return authorUrl
 }
 module.exports = {
