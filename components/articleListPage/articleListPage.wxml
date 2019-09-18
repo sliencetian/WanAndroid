@@ -1,18 +1,18 @@
 <!--articleListPage/articleListPage.wxml-->
-<scroll-view class="article-list-scroll-view">
+<scroll-view class="article-list-scroll-view"  scroll-y="true" style="height: 100%;" bindscrolltolower="listPageScrollToBottom">
   <block wx:for="{{listData}}" wx:key="unique">
-    <view class='liststyleC'>
-      <view class='listtop' id='{{item.link}}' data-item="{{item}}" bindtap='detail'>
+    <view class='list-item-root'>
+      <view class='list-top' id='{{item.link}}' data-item="{{item}}" bindtap='detail'>
         <view>
-          <image class='listtopimage' src="{{item.authorUrl}}"></image>
+          <image class='list-top-image' src="{{item.authorUrl}}"></image>
         </view>
-        <view class="listUserName">{{item.author}}</view>
-        <view class='listtoptime'>{{item.niceDate}}</view>
+        <view class="list-username">{{item.author}}</view>
+        <view class='list-top-time'>{{item.niceDate}}</view>
       </view>
       <view class='title' id='{{item.link}}' data-item="{{item}}" bindtap='detail'>{{item.title}}</view>
       <text wx:if="{{item.desc}}" class='desc' data-item="{{item}}" bindtap='detail'>{{item.desc}}</text>
-      <view class='listtop'>
-        <view class='chapterName' id='{{item.chapterId}}' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
+      <view class='list-top'>
+        <view class='chapter-name' id='{{item.chapterId}}' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
         <image wx:if="{{item.collect}}" class='collect' data-index="{{index}}" src='../../images/home/collectionSelect.png' id='{{item.id}}' bindtap='collect'></image>
         <image wx:if="{{!item.collect}}" class='collect' data-index="{{index}}" src='../../images/home/collectionNormal.png' id='{{item.id}}' bindtap='collect'></image>
       </view>

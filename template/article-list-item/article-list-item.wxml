@@ -1,0 +1,18 @@
+<template name="article-list-item">
+  <view class="item-root">
+      <view class='item-top' data-item="{{item}}" bindtap='detail'>
+        <view>
+          <image class='item-author-img' src="{{item.authorUrl}}"></image>
+        </view>
+        <view class='item-author-name'>{{item.author}}</view>
+        <view class='item-time-nice-date'>{{item.niceDate}}</view>
+      </view>
+      <view class='item-title' data-item="{{item}}" bindtap='detail'>{{item.title}}</view>
+      <text class='item-desc' wx:if="{{item.desc}}" data-item="{{item}}" bindtap='detail'>{{item.desc}}</text>
+      <view class='item-top'>
+        <view class='item-chapter' bindtap='chapter'>{{item.superChapterName}} · {{item.chapterName}}</view>
+        <image wx:if="{{item.collect}}" class='item-collect' data-index="{{index}}" src='../../images/home/collectionSelect.png' id='{{item.id}}' bindtap='collect'></image>
+        <image wx:if="{{!item.collect}}" class='item-collect' data-index="{{index}}" src='../../images/home/collectionNormal.png' id='{{item.id}}' bindtap='collect'></image>
+      </view>
+    </view>
+</template>

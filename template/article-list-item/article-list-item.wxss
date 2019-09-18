@@ -1,10 +1,4 @@
-/* articleListPage/articleListPage.wxss */
-
-.article-list-scroll-view {
-  display: flex;
-}
-
-.list-item-root {
+.item-root{
   display: flex;
   flex-direction: column;
   padding-top: 10px;
@@ -12,45 +6,45 @@
   font-size: 16px;
   margin-left: 10px;
   margin-right: 10px;
-  border-bottom: 1px solid #494949;
+  border-bottom: 1px solid #494949
 }
 
-.list-top {
+.item-top {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.list-username {
-  font-size: 12px;
-  color: #c1c1c1;
-  text-align: center;
-}
-
-.list-top-image {
+.item-author-img{
   width: 15px;
   height: 15px;
   border-radius: 50%;
   margin-right: 5px;
 }
 
-.list-top-time {
+.item-author-name {
+  font-size: 12px;
+  color: #C1C1C1;
+  text-align: center
+}
+
+.item-time-nice-date{
   position: absolute;
   right: 10px;
   text-align: right;
-  color: #c1c1c1;
+  color: #C1C1C1;
   font-size: 12px;
 }
 
-.title {
+.item-title{
   color: white;
   font-size: 14px;
   margin-top: 3px;
   margin-bottom: 1px;
 }
 
-.desc {
-  color: #c1c1c1;
+.item-desc{
+  color: #C1C1C1;
   font-size: 12px;
   margin-top: 1px;
   margin-bottom: 2px;
@@ -62,13 +56,14 @@
   white-space: nowrap;
 }
 
-.chapter-name {
+
+.item-chapter{
   font-size: 9px;
   color: white;
   margin-top: 4px;
 }
 
-.collect {
+.item-collect{
   width: 15px;
   height: 15px;
   padding: 10px;

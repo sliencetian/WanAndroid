@@ -38,6 +38,14 @@ Page({
       }
     })
   },
+  scrollToBottom: function () {
+    that.loadMoreData()
+  },
+  loadMoreData: function () {
+    var currTab = that.data.tabDatas[that.data.currentActiveNavIndex];
+    that.data.pageNumbers[currTab.id] = that.data.pageNumbers[currTab.id] + 1;
+    that.loadListDataByTab()
+  },
   loadListDataByTab: function () {
     wx.showNavigationBarLoading()
     var currTab = that.data.tabDatas[that.data.currentActiveNavIndex];
@@ -93,9 +101,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var currTab = that.data.tabDatas[that.data.currentActiveNavIndex];
-    that.data.pageNumbers[currTab.id] = that.data.pageNumbers[currTab.id] + 1;
-    that.loadListDataByTab()
+    that.loadMoreData()
   },
   /** 
    * 顶部导航改变事件，即被点击了 

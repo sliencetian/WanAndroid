@@ -26,6 +26,9 @@ Component({
       var item = e.currentTarget.dataset.item
       router.webView(item.link, item.title)
     },
+    listPageScrollToBottom: function (e) {
+      this.triggerEvent('customevent', {})
+    },
     collect:function(e){
       that = this
       var position = e.currentTarget.dataset.index

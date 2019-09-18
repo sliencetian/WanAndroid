@@ -8,7 +8,7 @@
   <swiper bindchange="swiperChange" class='swiper-container' current='{{currentActiveNavIndex}}'>  
     <block wx:for="{{tabDatas}}" wx:key='{{this}}'>  
       <swiper-item style="overflow:scroll">
-        <articleListView listData="{{tabListDatas[item.id]}}"/>
+        <articleListView bindcustomevent="scrollToBottom" listData="{{tabListDatas[item.id]}}"/>
       </swiper-item>  
     </block>  
   </swiper>  
