@@ -5,7 +5,7 @@
 
 | ![all](http://lc-d4bjfufj.cn-n1.lcfile.com/6f466f181efb545d082a/gifhome_320x685_9s.gif) | ![主页](http://lc-d4bjfufj.cn-n1.lcfile.com/681aa4727014cf98f193/home.jpeg) | ![项目](http://lc-d4bjfufj.cn-n1.lcfile.com/2ae8dca6486ce70e3574/project.jpeg) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![公众号](http://lc-d4bjfufj.cn-n1.lcfile.com/b5c6b78f9d93abc45532/Wechat.jpeg) | ![体系](http://10.252.87.9:8081/IXCbd72940987d0ccb76d6b746bf2a5eacd/994a1e512f2f93fa8784/struct.jpeg) | ![我的](http://lc-d4bjfufj.cn-n1.lcfile.com/fc20b07b8f1202e92133/user.jpeg) |
+| ![公众号](http://lc-d4bjfufj.cn-n1.lcfile.com/b5c6b78f9d93abc45532/Wechat.jpeg) | ![体系](http://lc-d4bjfufj.cn-n1.lcfile.com/a8cb12b61ff63c6e4526/struct.jpeg) | ![我的](http://lc-d4bjfufj.cn-n1.lcfile.com/fc20b07b8f1202e92133/user.jpeg) |
 | ![收藏](http://lc-d4bjfufj.cn-n1.lcfile.com/32185df486e23881293e/collect.jpeg) | ![关于](http://lc-d4bjfufj.cn-n1.lcfile.com/07a7eee5540aec97dfae/about.jpeg) | ![登录](http://lc-d4bjfufj.cn-n1.lcfile.com/2c2d39de0f11f19cd8a6/login.jpeg) |
 
 # 项目地址
@@ -14,9 +14,9 @@
 
 # 体验版
 
-目前尚未完成，还在进一步完善相关功能，下图为最新体验版
+目前尚未完成，还在进一步完善相关功能，下图为最新体验版。欢迎扫码申请体验
 
-![体验二维码]()
+![体验二维码](http://lc-d4bjfufj.cn-n1.lcfile.com/40cd49437d0a7e843932/1568256614.png)
 
 # 更新日志
 
