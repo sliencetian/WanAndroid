@@ -64,7 +64,11 @@ function HTMLParser(html, handler) {
 
 				if (match) {
 					html = html.substring(match[0].length);
-					match[0].replace(endTag, parseEndTag);
+          try {
+            match[0].replace(endTag, parseEndTag);
+          } catch(e){
+            console.log(e)
+          }
 					chars = false;
 				}
 
@@ -73,8 +77,12 @@ function HTMLParser(html, handler) {
 				match = html.match(startTag);
 
 				if (match) {
-					html = html.substring(match[0].length);
-					match[0].replace(startTag, parseStartTag);
+          html = html.substring(match[0].length);
+          try {
+            match[0].replace(startTag, parseStartTag);
+          } catch (e) {
+            console.log(e)
+          }
 					chars = false;
 				}
 			}

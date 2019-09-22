@@ -36,8 +36,10 @@ Page({
       url: url,
       success:function(res){
         wx.hideLoading()
+        let htmlContent = wxParse.wxParse('article', 'html', res.data, that, 5)
+        console.log(htmlContent)
         that.setData({
-          content: wxParse.wxParse('article', 'html', res.data, that, 5)
+          content: htmlContent
         })
       },
       fail:function(){
