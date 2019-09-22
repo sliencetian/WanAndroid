@@ -1,2 +1,6 @@
 /* pages/webview/webview.wxss */
 @import "../../wxParse/wxParse.wxss";
+
+.webview-page{
+    background-color: white;
+}
